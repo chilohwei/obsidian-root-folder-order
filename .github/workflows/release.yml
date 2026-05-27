@@ -1,0 +1,52 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "[0-9]*.[0-9]*.[0-9]*"
+
+permissions:
+  contents: write
+  id-token: write
+  attestations: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Validate release metadata
+        run: |
+          node --check main.js
+          node -e "const fs=require('fs'); for (const f of ['manifest.json','versions.json']) JSON.parse(fs.readFileSync(f,'utf8'));"
+          node -e "const m=require('./manifest.json'); if (m.version !== process.env.GITHUB_REF_NAME) throw new Error(`tag ${process.env.GITHUB_REF_NAME} must match manifest version ${m.version}`);"
+
+      - name: Prepare release assets
+        run: |
+          mkdir -p dist
+          cp main.js manifest.json styles.css dist/
+          shasum -a 256 dist/main.js dist/manifest.json dist/styles.css | tee dist/checksums.txt
+
+      - name: Generate artifact attestations
+        uses: actions/attest@v4
+        with:
+          subject-path: |
+            dist/main.js
+            dist/manifest.json
+            dist/styles.css
+
+      - name: Create GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" \
+            dist/main.js \
+            dist/manifest.json \
+            dist/styles.css \
+            --title "$GITHUB_REF_NAME" \
+            --notes "Supply-chain maintenance release. Assets are built and attested by GitHub Actions."

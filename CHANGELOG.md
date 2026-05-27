@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.1
+
+- Add a GitHub Actions release workflow with artifact attestations.
+- Add issue templates for bug reports and feature requests.
+- Refresh documentation after the plugin was listed in the Obsidian community directory.
+
 ## 1.0.0
 
 - Initial public release.

@@ -42,6 +42,12 @@ Obsidian can sort files and folders by its built-in rules, but many vaults need 
 
 ## Installation
 
+### Obsidian Community Plugin Directory
+
+1. Open `Settings -> Community plugins` in Obsidian.
+2. Search for `Root Folder Order`.
+3. Install and enable the plugin.
+
 ### Manual Install
 
 1. Download the latest release from [GitHub Releases](https://github.com/chilohwei/obsidian-root-folder-order/releases/latest).
@@ -192,7 +198,24 @@ For Obsidian community plugin releases:
 - Keep `manifest.json` at the repository root.
 - The GitHub release tag must exactly match `manifest.json` version, for example `1.0.0`.
 - Attach `main.js`, `manifest.json`, and `styles.css` to the GitHub release.
+- Prefer the `Release` GitHub Actions workflow so release assets receive artifact attestations.
 - Keep personal vault configuration such as `data.json` out of the release.
+
+To publish a release:
+
+```bash
+git tag 1.0.1
+git push origin 1.0.1
+```
+
+After the workflow finishes, verify the released assets:
+
+```bash
+gh release download 1.0.1 --repo chilohwei/obsidian-root-folder-order --dir /tmp/root-folder-order-verify --clobber
+gh attestation verify /tmp/root-folder-order-verify/main.js -R chilohwei/obsidian-root-folder-order
+gh attestation verify /tmp/root-folder-order-verify/manifest.json -R chilohwei/obsidian-root-folder-order
+gh attestation verify /tmp/root-folder-order-verify/styles.css -R chilohwei/obsidian-root-folder-order
+```
 
 ## License
 
