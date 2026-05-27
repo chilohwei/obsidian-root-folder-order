@@ -24,6 +24,8 @@ or:
 
 Obsidian can sort files and folders by its built-in rules, but many vaults need a stable root structure that does not change just because a folder name changes. This plugin only changes the order of root-level folders in the file explorer. Notes and nested folders keep Obsidian's normal sorting behavior.
 
+![Root Folder Order screenshot](docs/assets/root-folder-order-screenshot.png)
+
 ## Features
 
 - Sort root-level folders in a custom order.

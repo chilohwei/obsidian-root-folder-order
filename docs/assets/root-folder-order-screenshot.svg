@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <defs>
+    <style>
+      .bg { fill: #f3f4f6; }
+      .window { fill: #ffffff; stroke: #dddddf; }
+      .sidebar { fill: #f7f7f8; stroke: #e5e5e7; }
+      text { font-family: Helvetica, Arial, sans-serif; font-size: 15px; }
+      .muted { fill: #6f7278; font-size: 14px; font-weight: 400; }
+      .text { fill: #24252a; font-size: 15px; font-weight: 400; }
+      .title { fill: #202126; font-size: 30px; font-weight: 700; }
+      .section { fill: #202126; font-size: 18px; font-weight: 700; }
+      .strong { fill: #24252a; font-size: 15px; font-weight: 700; }
+      .active { fill: #e9e5f7; }
+      .purple { fill: #5a43a6; font-size: 15px; font-weight: 700; }
+      .card { fill: #fbfbfc; stroke: #e6e6e8; }
+      .button { fill: #ffffff; stroke: #d9d9df; }
+      .input { fill: #ffffff; stroke: #d9d9df; }
+      .row { fill: #ffffff; stroke: #e2e2e7; }
+      .pill { fill: #eaf7ee; }
+      .pilltext { fill: #287a3e; font-size: 12px; font-weight: 400; }
+      .callout { fill: #2f2a45; }
+      .calloutText { fill: #ffffff; font-size: 19px; font-weight: 700; }
+    </style>
+  </defs>
+  <rect class="bg" width="1200" height="800"/>
+  <rect class="window" x="70" y="48" width="1060" height="704" rx="18"/>
+  <rect class="sidebar" x="70" y="48" width="250" height="704" rx="18"/>
+  <rect class="sidebar" x="302" y="48" width="18" height="704"/>
+  <text class="strong" x="104" y="96">Obsidian</text>
+  <text class="muted" x="104" y="148">About</text>
+  <text class="muted" x="104" y="184">Editor</text>
+  <text class="muted" x="104" y="220">Files and links</text>
+  <text class="muted" x="104" y="256">Appearance</text>
+  <text class="muted" x="104" y="292">Community plugins</text>
+  <rect class="active" x="94" y="318" width="180" height="34" rx="8"/>
+  <text class="purple" x="104" y="341">Root Folder Order</text>
+
+  <rect x="104" y="392" width="160" height="166" rx="10" fill="#ffffff" stroke="#e4e4e7"/>
+  <text class="muted" x="120" y="420">File explorer</text>
+  <g class="text">
+    <text x="136" y="454">Reading</text>
+    <text x="136" y="484">Clips</text>
+    <text x="136" y="514">Notes</text>
+    <text x="136" y="544">Archive</text>
+    <text x="136" y="574">Resources</text>
+  </g>
+  <g fill="#9aa4b2">
+    <rect x="120" y="444" width="12" height="10" rx="2"/>
+    <rect x="120" y="474" width="12" height="10" rx="2"/>
+    <rect x="120" y="504" width="12" height="10" rx="2"/>
+    <rect x="120" y="534" width="12" height="10" rx="2"/>
+    <rect x="120" y="564" width="12" height="10" rx="2"/>
+  </g>
+
+  <text class="title" x="368" y="104">Root Folder Order</text>
+  <text class="muted" x="368" y="132">Set a stable order for top-level folders. Changes apply immediately.</text>
+  <text class="section" x="368" y="182">Quick Start</text>
+  <rect class="card" x="368" y="204" width="690" height="64" rx="10"/>
+  <text class="strong" x="390" y="232">Language</text>
+  <text class="muted" x="390" y="254">Auto, English, or Chinese.</text>
+  <rect class="button" x="958" y="218" width="76" height="34" rx="8"/>
+  <text class="text" x="983" y="240">Auto</text>
+  <rect class="card" x="368" y="284" width="690" height="64" rx="10"/>
+  <text class="strong" x="390" y="312">Add current root folders</text>
+  <text class="muted" x="390" y="334">Import folders that are not already configured.</text>
+  <rect class="button" x="930" y="298" width="104" height="34" rx="8"/>
+  <text class="text" x="951" y="320">Add current</text>
+  <rect class="card" x="368" y="364" width="690" height="64" rx="10"/>
+  <text class="strong" x="390" y="392">Add folder by name</text>
+  <text class="muted" x="390" y="414">Prepare a folder before it exists.</text>
+  <rect class="input" x="814" y="378" width="136" height="34" rx="8"/>
+  <text class="muted" x="830" y="400">Future folder</text>
+  <rect class="button" x="960" y="378" width="74" height="34" rx="8"/>
+  <text class="text" x="984" y="400">Add</text>
+
+  <text class="section" x="368" y="474">Current Order</text>
+  <g>
+    <rect class="row" x="368" y="496" width="690" height="52" rx="9"/>
+    <text class="muted" x="390" y="528">::</text><rect class="input" x="426" y="506" width="56" height="32" rx="7"/><text class="text" x="450" y="528">1</text><text class="strong" x="508" y="528">Reading</text><rect class="pill" x="578" y="511" width="58" height="24" rx="12"/><text class="pilltext" x="592" y="528">Present</text>
+    <rect class="button" x="836" y="506" width="58" height="32" rx="7"/><text class="text" x="856" y="527">Up</text><rect class="button" x="906" y="506" width="70" height="32" rx="7"/><text class="text" x="923" y="527">Down</text><rect class="button" x="988" y="506" width="58" height="32" rx="7"/><text class="text" x="1002" y="527">Remove</text>
+    <rect class="row" x="368" y="558" width="690" height="52" rx="9"/>
+    <text class="muted" x="390" y="590">::</text><rect class="input" x="426" y="568" width="56" height="32" rx="7"/><text class="text" x="450" y="590">2</text><text class="strong" x="508" y="590">Clips</text><rect class="pill" x="554" y="573" width="58" height="24" rx="12"/><text class="pilltext" x="568" y="590">Present</text>
+    <rect class="button" x="836" y="568" width="58" height="32" rx="7"/><text class="text" x="856" y="589">Up</text><rect class="button" x="906" y="568" width="70" height="32" rx="7"/><text class="text" x="923" y="589">Down</text><rect class="button" x="988" y="568" width="58" height="32" rx="7"/><text class="text" x="1002" y="589">Remove</text>
+    <rect class="row" x="368" y="620" width="690" height="52" rx="9"/>
+    <text class="muted" x="390" y="652">::</text><rect class="input" x="426" y="630" width="56" height="32" rx="7"/><text class="text" x="450" y="652">3</text><text class="strong" x="508" y="652">Notes</text><rect class="pill" x="560" y="635" width="58" height="24" rx="12"/><text class="pilltext" x="574" y="652">Present</text>
+    <rect class="button" x="836" y="630" width="58" height="32" rx="7"/><text class="text" x="856" y="651">Up</text><rect class="button" x="906" y="630" width="70" height="32" rx="7"/><text class="text" x="923" y="651">Down</text><rect class="button" x="988" y="630" width="58" height="32" rx="7"/><text class="text" x="1002" y="651">Remove</text>
+  </g>
+  <rect class="callout" x="650" y="704" width="432" height="52" rx="14"/>
+  <text class="calloutText" x="674" y="737">Drag, type a position number, or use Up / Down.</text>
+</svg>
