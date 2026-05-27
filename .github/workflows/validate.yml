@@ -1,0 +1,20 @@
+name: Validate
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Check JavaScript syntax
+        run: node --check main.js
+      - name: Check plugin metadata
+        run: |
+          node -e "const fs=require('fs'); for (const f of ['manifest.json','versions.json']) JSON.parse(fs.readFileSync(f,'utf8'));"
+          node -e "const m=require('./manifest.json'); if (!/^[0-9]+\\.[0-9]+\\.[0-9]+$/.test(m.version)) throw new Error('manifest version must be x.y.z');"

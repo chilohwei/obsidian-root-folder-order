@@ -1,0 +1,120 @@
+.root-folder-order-settings h2 {
+  text-align: left;
+}
+
+.root-folder-order-settings h3 {
+  margin-top: 28px;
+}
+
+.root-folder-order-intro {
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+
+.root-folder-order-advanced {
+  border-top: 1px solid var(--background-modifier-border);
+  margin-top: 24px;
+  padding-top: 12px;
+}
+
+.root-folder-order-advanced summary {
+  cursor: pointer;
+  font-weight: var(--font-semibold);
+}
+
+.root-folder-order-settings textarea {
+  min-height: 120px;
+  min-width: 260px;
+  resize: vertical;
+}
+
+.root-folder-order-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 16px;
+}
+
+.root-folder-order-row {
+  align-items: center;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 6px;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 24px 64px minmax(0, 1fr) auto;
+  padding: 8px;
+}
+
+@media (max-width: 640px) {
+  .root-folder-order-row {
+    grid-template-columns: 24px 56px minmax(0, 1fr);
+  }
+
+  .root-folder-order-controls {
+    grid-column: 1 / -1;
+    justify-content: flex-start;
+  }
+}
+
+.root-folder-order-row.is-dragging {
+  opacity: 0.5;
+}
+
+.root-folder-order-row.is-missing {
+  border-color: var(--text-warning);
+}
+
+.root-folder-order-drag {
+  color: var(--text-muted);
+  cursor: grab;
+  font-weight: 700;
+  text-align: center;
+}
+
+.root-folder-order-position {
+  width: 56px;
+}
+
+.root-folder-order-name {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+  min-width: 0;
+}
+
+.root-folder-order-name > span:first-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.root-folder-order-status {
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 999px;
+  color: var(--text-muted);
+  flex: 0 0 auto;
+  font-size: var(--font-ui-smaller);
+  line-height: 1;
+  padding: 3px 7px;
+}
+
+.root-folder-order-status.is-missing {
+  border-color: var(--text-warning);
+  color: var(--text-warning);
+}
+
+.root-folder-order-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: flex-end;
+}
+
+.root-folder-order-controls button {
+  white-space: nowrap;
+}
+
+.root-folder-order-empty {
+  color: var(--text-muted);
+  padding: 8px 0;
+}
