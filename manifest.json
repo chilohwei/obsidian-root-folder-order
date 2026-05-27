@@ -1,7 +1,7 @@
 {
   "id": "root-folder-order",
   "name": "Root Folder Order",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "minAppVersion": "1.0.0",
   "description": "Keep root-level folders in a custom order in the file explorer.",
   "author": "Chiloh",

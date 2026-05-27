@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.3
+
+- Enable repository release immutability for future GitHub releases.
+- Opt GitHub Actions into the current JavaScript action runtime.
+
 ## 1.0.2
 
 - Use the current Node.js runtime in GitHub Actions.
