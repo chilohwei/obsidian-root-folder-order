@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.2
+
+- Use the current Node.js runtime in GitHub Actions.
+- Publish release assets through the attested release workflow.
+
 ## 1.0.1
 
 - Add a GitHub Actions release workflow with artifact attestations.

@@ -204,14 +204,14 @@ For Obsidian community plugin releases:
 To publish a release:
 
 ```bash
-git tag 1.0.1
-git push origin 1.0.1
+git tag 1.0.2
+git push origin 1.0.2
 ```
 
 After the workflow finishes, verify the released assets:
 
 ```bash
-gh release download 1.0.1 --repo chilohwei/obsidian-root-folder-order --dir /tmp/root-folder-order-verify --clobber
+gh release download 1.0.2 --repo chilohwei/obsidian-root-folder-order --dir /tmp/root-folder-order-verify --clobber
 gh attestation verify /tmp/root-folder-order-verify/main.js -R chilohwei/obsidian-root-folder-order
 gh attestation verify /tmp/root-folder-order-verify/manifest.json -R chilohwei/obsidian-root-folder-order
 gh attestation verify /tmp/root-folder-order-verify/styles.css -R chilohwei/obsidian-root-folder-order
